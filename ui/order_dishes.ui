@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OrderDishesWindow</class>
+ <widget class="QMainWindow" name="OrderDishesWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>点菜界面</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout" stretch="4,12">
+    <item>
+     <widget class="QWidget" name="left_panel" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_left">
+       <item>
+        <widget class="QLabel" name="label_current_table">
+         <property name="text">
+          <string>当前餐桌: 桌台1</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_table_status">
+         <property name="text">
+          <string>餐桌状态: 空闲</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_selected_dishes">
+         <property name="text">
+          <string>已选菜品</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="search_box">
+         <property name="placeholderText">
+          <string>输入菜品名称搜索</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QScrollArea" name="selected_dishes_scroll">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="selected_dishes_container">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>174</width>
+            <height>393</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="selected_dishes_layout"/>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="summary_panel" native="true">
+         <layout class="QVBoxLayout" name="summary_layout">
+          <item>
+           <widget class="QLabel" name="label_subtotal">
+            <property name="text">
+             <string>标价金额: 0.00</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_discount">
+            <property name="text">
+             <string>折扣金额: 0.00</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_total">
+            <property name="text">
+             <string>最后结账金额: 0.00</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="right_panel" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_right">
+       <item>
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="tabPosition">
+          <enum>QTabWidget::TabPosition::North</enum>
+         </property>
+         <property name="currentIndex">
+          <number>4</number>
+         </property>
+         <widget class="QWidget" name="tab_all_dishes">
+          <attribute name="title">
+           <string>全部</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_all_dishes"/>
+         </widget>
+         <widget class="QWidget" name="tab_cold_dishes">
+          <attribute name="title">
+           <string>冷菜</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_cold_dishes"/>
+         </widget>
+         <widget class="QWidget" name="tab_hot_dishes">
+          <attribute name="title">
+           <string>热菜</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_hot_dishes"/>
+         </widget>
+         <widget class="QWidget" name="tab_drinks">
+          <attribute name="title">
+           <string>酒水</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_drinks"/>
+         </widget>
+         <widget class="QWidget" name="tab_custom_dishes">
+          <attribute name="title">
+           <string>其他</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_custom_dishes"/>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="buttons_panel" native="true">
+         <layout class="QHBoxLayout" name="buttons_layout">
+          <item>
+           <widget class="QPushButton" name="checkout_btn">
+            <property name="text">
+             <string>结账</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="exit_btn">
+            <property name="text">
+             <string>退出</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="save_btn">
+            <property name="text">
+             <string>保存</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="fullscreen_btn">
+            <property name="text">
+             <string>全屏</string>
+            </property>
+           </widget>
+          </item>
+           <item>
+               <widget class="QPushButton" name="delete_order_btn">
+                   <property name="text">
+                       <string>删除订单</string>
+                   </property>
+               </widget>
+           </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
